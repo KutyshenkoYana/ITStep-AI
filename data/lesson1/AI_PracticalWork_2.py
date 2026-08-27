@@ -109,3 +109,11 @@ print(image.min())
 #
 # cv2.waitKey(0)
 
+
+result = (image / 255) ** 0.4 * 255
+result = result.astype(np.uint8)
+
+cv2.imshow("image", result)
+
+cv2.waitKey(0)
+
